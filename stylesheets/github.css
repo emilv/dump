@@ -1,0 +1,52 @@
+/*
+Drop whitespace from Github.com and decrease site width.
+Copyright (C) 2014 Emil Vikström
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+See LICENSE file for complete terms.
+*/
+
+body 
+{ min-width: 0 !important; }
+
+.container, .lrepository-with-sidebar
+{ width: 100% !important; }
+
+/* Always collapse sidebar */
+.with-full-navigation .repository-sidebar
+{ width: 38px !important;}
+
+.with-full-navigation .octicon ~ *
+{ display: none !important; }
+
+/* File listings as well as general width */
+.repository-content, .discussion, .discussion-timeline
+{ 
+  overflow: hidden !important;
+  width: 600px !important;
+}
+
+.repository-content table, table.files, table.files tbody
+{
+  max-width: 594px !important;
+  width: 594px !important;
+}
+
+table.files td
+{ 
+  text-overflow: ellipsis;
+  padding: 2px !important;
+}
+
+table.files .message a
+{
+  max-width: 380px;
+  display: inline-block;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis !important;
+}
