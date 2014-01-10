@@ -18,35 +18,78 @@ body
 
 /* Always collapse sidebar */
 .with-full-navigation .repository-sidebar
-{ width: 38px !important;}
+{ width: 38px !important; }
 
 .with-full-navigation .octicon ~ *
 { display: none !important; }
 
+/* Minimize sidebar and make it stick. */
+.repository-sidebar
+{ position: fixed;
+  right:0;
+  margin-top: -30px;
+}
+
+.repository-sidebar li a
+{ height: 20px;
+  padding: 1px 10px !important;
+ }
+
 /* File listings as well as general width */
 .repository-content, .discussion, .discussion-timeline
-{ 
-  overflow: hidden !important;
-  width: 600px !important;
+{ overflow: hidden !important;
+  width: 640px !important;
 }
 
 .repository-content table, table.files, table.files tbody
-{
-  max-width: 594px !important;
-  width: 594px !important;
+{ max-width: 634px !important;
+  width: 634px !important;
 }
 
 table.files td
-{ 
-  text-overflow: ellipsis;
+{  text-overflow: ellipsis;
   padding: 2px !important;
 }
 
 table.files .message a
-{
-  max-width: 380px;
+{ max-width: 380px;
   display: inline-block;
   white-space: nowrap !important;
   overflow: hidden !important;
   text-overflow: ellipsis !important;
 }
+
+/* Code listings for 80 char width */
+.blob-line-code .line
+{ padding-left: 1px !important; }
+
+.blob-line-nums a, .blob-line-nums *
+{ padding: 0 1px !important; }
+
+/* Move cloning from sidebar */
+/*
+.only-with-full-nav::before
+{ content: "Show";
+  text-align: right;
+  display: block;
+  color: #999;
+  visibility: visible !important;
+  }
+
+.only-with-full-nav:hover *
+{ visibility: visible !important;
+  margin-left: -200px;
+}
+
+.only-with-full-nav:hover
+{ width: 300px !important;
+  background-color: red;
+  z-index: 1001;
+}
+
+.only-with-full-nav *
+{ visibility: hidden;
+  text-overflow: visible;
+  display: block;
+}
+*/
