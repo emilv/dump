@@ -74,7 +74,7 @@ table.files .message a
 .expandable-line-num *
 { min-width: 0 !important; }
 
-/* Popups for cloning, menu etc */
+/* Popup for cloning etc in sidebar */
 .only-with-full-nav:hover *
 { visibility: visible !important; }
 
@@ -82,10 +82,24 @@ table.files .message a
 { visibility: hidden; }
 
 .only-with-full-nav::before
-{ content: "More";
+{ content: "More\25BE";
   color: #999;
 }
 
+/* Nice popup box */
+.only-with-full-nav > *
+{ position: relative;
+  right: 265px;
+  top: -15px; 
+  width: 300px !important;
+  z-index: 1001;
+  padding: 2px !important;
+  margin: 0 !important;
+  background-color: #f8f8f8;
+  border-left: 1px solid #eee;
+}
+
+/* Github dropdown menu */
 .top-nav::before
 { content: "Github \25BE";
   display: block;
@@ -111,17 +125,4 @@ table.files .message a
 { width: 100%;
   background-color: #f3f3f3;
   margin-left: 0 !important;
-}
-
-/* Nice popup box */
-.only-with-full-nav > *
-{ position: relative;
-  right: 265px;
-  top: -15px; 
-  width: 300px !important;
-  z-index: 1001;
-  padding: 2px !important;
-  margin: 0 !important;
-  background-color: #f8f8f8;
-  border-left: 1px solid #eee;
 }
