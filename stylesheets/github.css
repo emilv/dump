@@ -13,6 +13,9 @@ See LICENSE file for complete terms.
 body 
 { min-width: 0 !important; }
 
+.header
+{ min-width: 0 !important; }
+
 .container, .repository-with-sidebar
 { width: 100% !important; }
 
@@ -71,12 +74,37 @@ table.files .message a
 .expandable-line-num *
 { min-width: 0 !important; }
 
-/* Popup for cloning etc */
+/* Popups for cloning, menu etc */
+.only-with-full-nav:hover *
+{ visibility: visible !important; }
+
+.only-with-full-nav *
+{ visibility: hidden; }
+
 .only-with-full-nav::before
 { content: "More";
   color: #999;
-  }
+}
 
+.top-nav::before
+{ content: "Github";
+  display: block;
+ }
+
+.top-nav > *
+{ display: none; }
+
+.top-nav:hover > *
+{ display: block; }
+
+.top-nav
+{ width: auto !important; background-color: #f3f3f3;}
+
+.top-nav li a
+{ display: inline;
+}
+
+/* Nice popup box */
 .only-with-full-nav > *
 { position: relative;
   right: 265px;
@@ -88,9 +116,3 @@ table.files .message a
   background-color: #f8f8f8;
   border-left: 1px solid #eee;
 }
-
-.only-with-full-nav:hover *
-{ visibility: visible !important; }
-
-.only-with-full-nav *
-{ visibility: hidden; }
