@@ -13,12 +13,14 @@ See LICENSE file for complete terms.
 body 
 { min-width: 0 !important; }
 
-.container, .lrepository-with-sidebar
+.container, .repository-with-sidebar
 { width: 100% !important; }
 
 /* Always collapse sidebar */
 .with-full-navigation .repository-sidebar
-{ width: 38px !important; }
+{ width: 38px !important;
+  overflow: visible !important;
+}
 
 .with-full-navigation .octicon ~ *
 { display: none !important; }
@@ -69,30 +71,26 @@ table.files .message a
 .expandable-line-num *
 { min-width: 0 !important; }
 
-/* Move cloning from sidebar */
-/*
+/* Popup for cloning etc */
 .only-with-full-nav::before
-{ content: "Show";
-  text-align: right;
-  display: block;
+{ content: "More";
   color: #999;
-  visibility: visible !important;
   }
 
-.only-with-full-nav:hover *
-{ visibility: visible !important;
-  margin-left: -200px;
+.only-with-full-nav > *
+{ position: relative;
+  right: 265px;
+  top: -15px; 
+  width: 300px !important;
+  z-index: 1001;
+  padding: 2px !important;
+  margin: 0 !important;
+  background-color: #f8f8f8;
+  border-left: 1px solid #eee;
 }
 
-.only-with-full-nav:hover
-{ width: 300px !important;
-  background-color: red;
-  z-index: 1001;
-}
+.only-with-full-nav:hover *
+{ visibility: visible !important; }
 
 .only-with-full-nav *
-{ visibility: hidden;
-  text-overflow: visible;
-  display: block;
-}
-*/
+{ visibility: hidden; }
