@@ -87,9 +87,12 @@ table.files .message a
 }
 
 .top-nav::before
-{ content: "Github";
+{ content: "Github \25BE";
   display: block;
- }
+  width: 60px;
+  font: normal normal 700 13px/16px Arial;
+  padding-top: 6px;
+}
 
 .top-nav > *
 { display: none; }
@@ -97,11 +100,17 @@ table.files .message a
 .top-nav:hover > *
 { display: block; }
 
+/* Github menu */
 .top-nav
-{ width: auto !important; background-color: #f3f3f3;}
+{ width: auto !important; }
 
 .top-nav li a
-{ display: inline;
+{ display: inline; }
+
+.top-nav li
+{ width: 100%;
+  background-color: #f3f3f3;
+  margin-left: 0 !important;
 }
 
 /* Nice popup box */
