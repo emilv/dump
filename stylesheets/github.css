@@ -47,7 +47,7 @@ body
 }
 
 table.files td
-{  text-overflow: ellipsis;
+{ text-overflow: ellipsis;
   padding: 2px !important;
 }
 
@@ -59,12 +59,15 @@ table.files .message a
   text-overflow: ellipsis !important;
 }
 
-/* Code listings for 80 char width */
-.blob-line-code .line
+/* Code listings, 80 char width */
+.blob-line-code .line, .diff-line-code
 { padding-left: 1px !important; }
 
-.blob-line-nums a, .blob-line-nums *
+.blob-line-nums a, .blob-line-nums *, .diff-line-num
 { padding: 0 1px !important; }
+
+.expandable-line-num *
+{ min-width: 0 !important; }
 
 /* Move cloning from sidebar */
 /*
